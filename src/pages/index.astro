@@ -1,16 +1,51 @@
 ---
-
+const siteName = '🌷 New Portfolio 🌻'
+const announces = ['🚧 建築中 🚧', '⚠️ 危ないので下がってください ⚠️', '【完成時期：そのうち】']
+// ⚠️🌪️👷‍♀️🏗️🏗⚡🚧🚛🌪️🐕🌳🏃🏠🌷🌻
 ---
 
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{siteName}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="main-container">
+			<h1>{siteName}</h1>
+			<div class="announce">
+				{announces.map(announce => (
+					<p>{announce}</p>
+				))}
+			</div>
+		</div>
 	</body>
 </html>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		background-color: lightyellow;
+	}
+	h1 {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	.announce {
+		border: 1px solid;
+		padding: 0.5em 3em;
+		background-color: yellow;
+	}
+	p {
+		text-align: center;
+		letter-spacing: 0.25em;
+	}
+</style>
