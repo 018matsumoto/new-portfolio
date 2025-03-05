@@ -1,0 +1,26 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+const siteName = 'とあるエンジニアのぽーとふぉりお'
+const { pageTitle } = Astro.props;
+const headTitle = pageTitle ? `${pageTitle} | ${siteName}` : siteName;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{headTitle}</title>
+  </head>
+  <body>
+    <Header siteName={siteName} />
+    <main>
+      <h1>{pageTitle}</h1>
+      <slot />
+    </main>
+    <Footer siteName={siteName} />
+  </body>
+</html>

@@ -1,0 +1,77 @@
+---
+const { siteName } = Astro.props;
+---
+
+<header>
+  <nav>
+    <h2>
+      <a href="./">{siteName}</a>
+    </h2>
+    <div class="menus">
+      <a href="#">🌞🌙</a>
+      <a href="./">🏠</a>
+      <a href="./about">🐭</a>
+      <a href="./works">🔨</a>
+      <a href="./blog">📝</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: white;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    padding: 0 1rem;
+    border-bottom: 0.2rem solid dimgray;
+  }
+  h2 {
+    display: none;
+    font-size: medium;
+    letter-spacing: 0.2rem;
+  }
+  .menus {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  a {
+    padding: 0.2rem 0.5rem;
+    border-color: dimgray;
+    border-style: solid;
+    font-weight: bold;
+    color: dimgray;
+    /* border-radius: 0.5rem; */
+    box-shadow: 0.5rem 0.5rem dimgray;
+    margin: 0 0.3rem 0.3rem 0;
+  }
+  a:hover {
+    background-color: aquamarine;
+    color: white;
+    box-shadow: 0.2rem 0.2rem dimgray;
+    margin: 0.3rem 0 0 0.3rem;
+  }
+  @media screen and (min-width: 760px) {
+    nav {
+      justify-content: space-between;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .menus {
+      gap: 1rem;
+    }
+    a {
+      padding: 0.2rem 1rem;
+    }
+  }
+</style>

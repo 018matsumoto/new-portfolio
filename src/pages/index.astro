@@ -1,51 +1,37 @@
 ---
-const siteName = '🌷 New Portfolio 🌻'
-const announces = ['🚧 建築中 🚧', '⚠️ 危ないので下がってください ⚠️', '【完成時期：そのうち】']
-// ⚠️🌪️👷‍♀️🏗️🏗⚡🚧🚛🌪️🐕🌳🏃🏠🌷🌻
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{siteName}</title>
-	</head>
-	<body>
-		<div class="main-container">
-			<h1>{siteName}</h1>
-			<div class="announce">
-				{announces.map(announce => (
-					<p>{announce}</p>
-				))}
-			</div>
-		</div>
-	</body>
-</html>
+<BaseLayout>
+  <section>
+    <div>
+      <h2>look?</h2>
+    </div>
+  </section>
+</BaseLayout>
+
 <style>
-	body {
-		margin: 0;
-		padding: 0;
-	}
-	.main-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		height: 100vh;
-		background-color: lightyellow;
-	}
-	h1 {
-		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	}
-	.announce {
-		border: 1px solid;
-		padding: 0.5em 3em;
-		background-color: yellow;
-	}
-	p {
-		text-align: center;
-		letter-spacing: 0.25em;
-	}
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-color: aqua; */
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 15rem;
+    padding: 0.2rem 1rem;
+    border-color: dimgray;
+    border-style: solid;
+    font-weight: bold;
+    color: dimgray;
+    /* border-radius: 0.5rem; */
+    box-shadow: 0.5rem 0.5rem dimgray;
+    margin: 0 0.3rem 0.3rem 0;
+    background-color: white;
+  }
 </style>
